@@ -1,0 +1,28 @@
+.header{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header a{
+    text-decoration: none;
+    color: black;
+}
+
+.header h1{
+    font-size: 32px;
+}
+
+.navLinks{
+    display: flex;
+    gap: 40px;
+}
+.navLinks a {
+    background: linear-gradient(90deg, #7E90FE 0%, #9873FF 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+    text-decoration: inherit;
+  }

@@ -1,0 +1,28 @@
+.banner {
+    padding: 40px 150px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+img {
+    height: 500px;
+}
+
+.banner-text {
+    font-size: 50px;
+    font-weight: 700;
+    
+}
+.banner-details{
+    font-size: 16px;
+    color: #757575;
+    width: 500px;
+}
+
+.gradient-text {
+    background: linear-gradient(90deg, #7E90FE 0%, #9873FF 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

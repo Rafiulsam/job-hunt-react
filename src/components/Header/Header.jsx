@@ -7,7 +7,7 @@ const Header = () => {
         <nav className='header'>
             <h1><Link to='/'>JobHut</Link></h1>
             <div className='navLinks'>
-                <NavLink to='statistics'>Statistics</NavLink>
+                <NavLink className={({isActive})=>isActive ? 'active': ''} to='statistics'>Statistics</NavLink>
                 <NavLink to='appliedJobs'>Applied Jobs</NavLink>
                 <NavLink to='blog'>Blog</NavLink>
             </div>

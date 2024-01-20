@@ -6,7 +6,6 @@ import { useLoaderData } from 'react-router-dom';
 
 const Home = () => {
     const categories = useLoaderData()
-    console.log(categories);
     return (
         <div>
             <section className='banner-section'>

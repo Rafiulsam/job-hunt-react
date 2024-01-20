@@ -2,7 +2,7 @@ import React from 'react';
 import './Banner.css'
 const Banner = () => {
     return (
-        <section className='banner'>
+        <div className='banner'>
             <div>
                 <h1 className='banner-text'>One Step <br />Closer To Your <br /> <span className='gradient-text'>Dream Job</span></h1>
                 <p className='banner-details'>
@@ -14,7 +14,7 @@ const Banner = () => {
                 <img src="/src/assets/images/user.png" alt="" />
             </div>
 
-        </section>
+        </div>
     );
 };
 

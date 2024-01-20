@@ -1,14 +1,7 @@
-import { useEffect, useState } from 'react';
 import './CategoryList.css'
 
-const CategoryList = () => {
-    // const [categories, setCategories] = useState()
-    
-    // useEffect(()=>{
-    //     fetch('categories.json')
-    //     .then(res => res.json())
-    //     .then()
-    // },[])
+const CategoryList = ({categories}) => {
+        console.log(categories);
     return (
         <div className='categories'>
             <h1 className='categories-title'>Job Category List</h1>

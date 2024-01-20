@@ -8,6 +8,7 @@ import Root from './components/layout/Root/Root.jsx'
 import Statistics from './components/Statistics/Statistics.jsx'
 import AppliedJobs from './components/AppliedJobs/AppliedJobs.jsx'
 import Blog from './components/Blog/Blog.jsx'
+import fetchCategories from './loader/loadCategories.js'
 
 const router = createBrowserRouter([
   {
@@ -16,7 +17,8 @@ const router = createBrowserRouter([
     children:[
       {
         path:'/',
-        element:<Home></Home>
+        element:<Home></Home>,
+        loader: fetchCategories
       },
       {
         path:'/statistics',

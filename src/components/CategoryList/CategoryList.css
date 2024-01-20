@@ -6,7 +6,10 @@
     text-align: center;
 }
 .categories-title{
-    
+    color: #1A1919;
+}
+.categories-details{
+    color: #757575;
 }
 .categories-container{
     margin-top: 32px;

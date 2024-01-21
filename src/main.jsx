@@ -8,7 +8,6 @@ import Statistics from './components/Statistics/Statistics.jsx'
 import AppliedJobs from './components/AppliedJobs/AppliedJobs.jsx'
 import Blog from './components/Blog/Blog.jsx'
 import fetchCategories from './loader/loadCategories.js'
-import fetchJobs from './loader/loadJobs.js'
 
 const router = createBrowserRouter([
   {

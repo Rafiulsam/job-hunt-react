@@ -1,0 +1,42 @@
+.job {
+    padding: 40px;
+    border: 1px solid #E8E8E8;
+    text-align: start;
+    
+}
+
+.job img {
+    height: 40px;
+}
+
+.flex {
+    display: flex;
+    gap: 20px;
+}
+
+.job-title {
+    color: #474747;
+    font-size: 24px;
+    font-weight: 800;
+    margin-bottom: 7px;
+}
+.company-name{
+   color: #757575;
+   font-size: 20px;
+   margin-bottom: 16px;
+}
+.box{
+    font-weight: 700;
+    border: 1px solid #7E90FE;
+    color: #7E90FE;
+    padding: 6px 12px;
+    border-radius: 4px;
+}
+
+.location , .salary{
+    margin-top: 12px;
+    margin-bottom: 20px;
+    color:  #757575;
+    font-size: 20px;
+    font-weight: 500;
+}

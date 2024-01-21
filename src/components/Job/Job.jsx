@@ -1,5 +1,7 @@
 import React from 'react';
 import './Job.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faLocationDot , faMoneyBill } from '@fortawesome/free-solid-svg-icons'
 const Job = ({ job }) => {
     const { company_name, job_title, job_type, location, salary, logo, remote_or_onsite } = job
     console.log(job);
@@ -13,8 +15,9 @@ const Job = ({ job }) => {
                 <p className='box'>{job_type}</p>
             </div>
             <div className='flex'>
-                <p className='location'>{location}</p>
-                <p className='salary'>{salary}</p>
+                <p className='location'><span><FontAwesomeIcon icon={faLocationDot} />
+                </span> {location}</p>
+                <p className='salary'> <span><FontAwesomeIcon icon={faMoneyBill} /></span> Salary: {salary}</p>
             </div>
             <button>View Details</button>
         </div>

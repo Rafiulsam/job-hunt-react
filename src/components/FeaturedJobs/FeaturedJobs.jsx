@@ -4,17 +4,22 @@ import Job from '../Job/Job';
 
 const FeaturedJobs = () => {
     const [jobs, setJobs] = useState([]);
-    const [showAllJobs, setShowAllJobs] = useState(false);
 
     useEffect(() => {
         const loadData = async () => {
             const response = await fetch('jobs.json');
             const data = await response.json();
-            setJobs(data.slice(0, showAllJobs ? data.length : 4));
+            setJobs(data.slice(0, 4));
         };
 
         loadData();
-    }, [showAllJobs]);
+    }, []);
+
+    const handleSeeAllBtn = async () => {
+        const response = await fetch('jobs.json');
+        const data = await response.json();
+        setJobs(data);
+    };
 
     return (
         <div className='featured-jobs'>
@@ -26,7 +31,7 @@ const FeaturedJobs = () => {
                 ))}
             </div>
             {jobs.length === 4 && (
-                <button onClick={()=>setShowAllJobs(true)}>See All Jobs</button>
+                <button onClick={handleSeeAllBtn}>See All Jobs</button>
             )}
         </div>
     );

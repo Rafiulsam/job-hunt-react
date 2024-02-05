@@ -6,13 +6,12 @@ import { useLoaderData } from 'react-router-dom';
 import FeaturedJobs from '../FeaturedJobs/FeaturedJobs';
 
 const Home = () => {
-    const categories = useLoaderData()
     return (
         <div>
             <section className='banner-section'>
              <Banner></Banner>
             </section>
-            <CategoryList categories ={categories}></CategoryList>
+            <CategoryList></CategoryList>
             <FeaturedJobs></FeaturedJobs>
         </div>
     );

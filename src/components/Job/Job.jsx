@@ -1,10 +1,10 @@
 import React from 'react';
 import './Job.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faLocationDot , faMoneyBill } from '@fortawesome/free-solid-svg-icons'
+import { faLocationDot, faMoneyBill } from '@fortawesome/free-solid-svg-icons'
+import { Link } from 'react-router-dom';
 const Job = ({ job }) => {
-    const { company_name, job_title, job_type, location, salary, logo, remote_or_onsite } = job
-    console.log(job);
+    const { company_name, job_title, job_type, location, salary, logo, remote_or_onsite, id } = job
     return (
         <div className='job'>
             <img src={logo} alt="" />
@@ -19,7 +19,7 @@ const Job = ({ job }) => {
                 </span> {location}</p>
                 <p className='salary'> <span><FontAwesomeIcon icon={faMoneyBill} /></span> Salary: {salary}</p>
             </div>
-            <button>View Details</button>
+            <Link to={`job/${id}`}> <button>View Details</button></Link>
         </div>
     );
 };

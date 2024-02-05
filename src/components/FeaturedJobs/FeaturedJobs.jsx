@@ -7,7 +7,7 @@ const FeaturedJobs = () => {
 
     useEffect(() => {
         const loadData = async () => {
-            const response = await fetch('jobs.json');
+            const response = await fetch('/jobs.json');
             const data = await response.json();
             setJobs(data.slice(0, 4));
         };
@@ -16,7 +16,7 @@ const FeaturedJobs = () => {
     }, []);
 
     const handleSeeAllBtn = async () => {
-        const response = await fetch('jobs.json');
+        const response = await fetch('/jobs.json');
         const data = await response.json();
         setJobs(data);
     };

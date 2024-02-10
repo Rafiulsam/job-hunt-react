@@ -1,6 +1,8 @@
 import React from 'react';
 import './JobDetails.css'
 import { useLoaderData, useParams } from 'react-router-dom';
+import { addToLocalStorage } from '../../utilities/localStorage';
+import toast from 'react-hot-toast';
 const JobDetails = () => {
     const jobData = useLoaderData()
     const { id } = useParams()
@@ -8,7 +10,11 @@ const JobDetails = () => {
     const job = jobData.find(job => job.id === idStr)
     console.log(job);
     const { job_description, job_responsibility, company_name, educational_requirements, experiences, salary, job_title, contact_information } = job
-
+     
+    const handleApplyBtn=()=>{
+        addToLocalStorage(idStr)
+        toast.success('You have applied successfully')
+    }
     return (
         <div>
             <h2 className='title'>Job Details</h2>
@@ -35,7 +41,7 @@ const JobDetails = () => {
                             <p><strong>Address: </strong>{contact_information.address}</p>
                         </div>
                     </div>
-                    <button>Apply Now</button>
+                    <button onClick={handleApplyBtn}>Apply Now</button>
                 </div>
             </div>
         </div>

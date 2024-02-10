@@ -1,0 +1,15 @@
+.item{
+    border: 1px solid rgba(128, 128, 128, 0.39);
+    border-radius: 8px;
+    margin: 24px 150px;
+    padding:30px 45px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.item img{
+    border-radius: 8px;
+    padding: 90px 47px;
+    background-color: rgba(128, 128, 128, 0.13);
+    width: 145px;
+}

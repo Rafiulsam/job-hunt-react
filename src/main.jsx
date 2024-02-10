@@ -8,6 +8,7 @@ import Statistics from './components/Statistics/Statistics.jsx'
 import AppliedJobs from './components/AppliedJobs/AppliedJobs.jsx'
 import Blog from './components/Blog/Blog.jsx'
 import JobDetails from './components/JobDetails/JobDetails.jsx'
+import { addToLocalStorage } from './utilities/localStorage.js'
 
 const router = createBrowserRouter([
   {
@@ -29,7 +30,8 @@ const router = createBrowserRouter([
       },
       {
         path:'/appliedJobs',
-        element:<AppliedJobs></AppliedJobs>
+        element:<AppliedJobs></AppliedJobs>,
+        loader:()=>fetch('/jobs.json')
       },
       {
         path:'/blog',

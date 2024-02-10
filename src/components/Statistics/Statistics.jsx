@@ -1,10 +1,11 @@
 import React from 'react';
 import './Statistics.css'
+import Recharts from '../Recharts/Recharts';
 
 const Statistics = () => {
     return (
         <div>
-            <h1>this is Statistics page</h1>
+            <Recharts></Recharts>
         </div>
     );
 };

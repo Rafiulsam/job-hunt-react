@@ -11,8 +11,8 @@ const Dropdown = ({handleFilteredJobs}) => {
                 {isOpen && ( <div className='dropdown-content'>
                     <ul>
                         <li onClick={()=>handleFilteredJobs('all')}>All</li>
-                        <li onClick={()=>handleFilteredJobs('Remote')}>Remote</li>
                         <li onClick={()=>handleFilteredJobs('Onsite')}>Onsite</li>
+                        <li onClick={()=>handleFilteredJobs('Remote')}>Remote</li>
                     </ul>
                 </div>
 

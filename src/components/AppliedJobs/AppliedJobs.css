@@ -7,3 +7,10 @@
 .applied-jobs-container{
 	width: 100%;
 }
+.applied-jobs h1{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 300px;
+	color: #474747;
+}

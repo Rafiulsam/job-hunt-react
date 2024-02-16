@@ -38,11 +38,12 @@ const AppliedJobs = () => {
             <h2 className='title'>Applied Jobs</h2>
             <div className='applied-jobs'>
                 <Dropdown handleFilteredJobs={handleFilteredJobs}></Dropdown>
-                <div className='applied-jobs-container'>
-                    {
-                        displayedJobs.map(job => <AppliedItem key={job.id} job={job}></AppliedItem>)
-                    }
-                </div>
+                {displayedJobs.length > 0 ? (
+                    <div className='applied-jobs-container'>
+                        {
+                            displayedJobs.map(job => <AppliedItem key={job.id} job={job}></AppliedItem>)
+                        }
+                    </div>) : <h1 className='applied-jobs-container'>Applied jobs will appear here</h1>}
             </div>
         </>
     );

@@ -1,7 +1,7 @@
 import React from 'react';
 import './JobDetails.css'
 import { useLoaderData, useParams } from 'react-router-dom';
-import { addToLocalStorage } from '../../utilities/localStorage';
+import { addToLocalStorage, getFromLocalStorage } from '../../utilities/localStorage';
 import toast from 'react-hot-toast';
 const JobDetails = () => {
     const jobData = useLoaderData()
@@ -10,10 +10,16 @@ const JobDetails = () => {
     const job = jobData.find(job => job.id === idStr)
     console.log(job);
     const { job_description, job_responsibility, company_name, educational_requirements, experiences, salary, job_title, contact_information } = job
-     
-    const handleApplyBtn=()=>{
-        addToLocalStorage(idStr)
-        toast.success('You have applied successfully')
+
+    const handleApplyBtn = () => {
+        const exist = getFromLocalStorage()
+        if (!exist.includes(idStr)) {
+            addToLocalStorage(idStr)
+            toast.success('You have applied successfully')
+        }
+        else{
+            toast.error('You have already applied for this job')
+        }
     }
     return (
         <div>

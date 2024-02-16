@@ -1,8 +1,11 @@
 .dropdown {
     cursor: pointer;
     border-radius: 4px;
-    padding: 20px;
+    padding: 10px;
     background-color: rgba(128, 128, 128, 0.13);
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .dropdown-content ul {
@@ -10,12 +13,14 @@
     border: 1px solid gray;
     position: absolute;
     list-style-type: none;
-    width: 86px;
-    padding: 15px;
+    padding: 18px;
     background-color: white;
+    
 }
+
 .dropdown-content ul li:hover {
     cursor: pointer;
     background-color: rgba(128, 128, 128, 0.13);
     outline: none;
+    
 }

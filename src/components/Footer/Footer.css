@@ -1,13 +1,33 @@
-.footer{
+.footer {
     display: flex;
-    justify-content:space-between ;
+    justify-content: space-between;
     align-items: center;
     margin-top: 100px;
     padding: 100px 150px;
     color: white;
     background-color: black;
 }
-.footer p{
+
+.footer p {
     color: #757575;
     width: 300px;
+}
+
+/* Media Query for medium devices */
+@media only screen and (max-width: 768px) {
+    .footer {
+        padding: 50px;
+        text-align: center;
+    }
+
+    .footer p {
+        width: 100%;
+    }
+}
+
+/* Media Query for small devices */
+@media only screen and (max-width: 480px) {
+    .footer {
+        padding: 30px;
+    }
 }

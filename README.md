@@ -29,7 +29,7 @@ Welcome to Job Hunt a platfrom where you can find your dream job. We provides co
     npm run dev
     ```
 
-    ## Live Demo
+## Live Demo
 Check out the live demo [here](https://job-hunt-100.netlify.app/).
 
 ## Contributing
